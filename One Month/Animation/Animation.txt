@@ -1,0 +1,93 @@
+.mustache {
+
+    /* 1 - 1st draw circles
+       2 - brds 50%
+       3 -absolute for easy placement
+       4 - adding bg color with current color so that no need to add color every time
+       */
+    width: 180px;
+    height: 180px;
+    left: 100px;
+    border-radius: 50%;
+    position: absolute;
+    color: black;
+    /* background-color: currentColor; */
+    /* above  will form a circle */
+    box-shadow:
+        150px 240px 0 0 currentColor,
+        300px 240px 0 0 currentColor;
+    /* x y spread blur
+    and this will form 2 shadow circle*/
+
+
+
+
+
+
+}
+
+/* need to draw the curved part with box using pseudo */
+.mustache::before {
+
+    content: "";
+    /* need to set content box empty string for pseudo to show up */
+    position: absolute;
+    left: 30px;
+    top: 120px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    /* form main box _ is then border bottom */
+    /* background-color: red; */
+    /*1- red is the main part
+     2 - need to curve the box ie left side
+    */
+    border-radius: 0 0 0 100%;
+    transform: rotate(-40deg);
+    transform-origin: right 210px;
+    animation: shake-left 1s ease-in-out infinite alternate;
+}
+
+.mustache::after {
+    content: "";
+    /* need to set content box empty string for pseudo to show up */
+    position: absolute;
+    left: 390px;
+    top: 120px;
+    width: 210px;
+    height: 120px;
+    border-bottom: solid 180px currentColor;
+    /* form main box _ is then border bottom */
+    /* background-color: red; */
+    /*1- red is the main part
+     2 - need to curve the box ie left side
+    */
+    border-radius: 0 0 100%;
+    /* bottom right */
+    transform: rotate(40deg);
+    transform-origin: left 210px;
+    animation: shake-right 1s ease-in-out infinite alternate;
+}
+
+@keyframes shake-left {
+    0%{
+        rotate: -10deg;
+    }
+    100%{
+        rotate: -20deg;
+        /* background-color: darkred; */
+       
+
+    }
+}
+
+@keyframes shake-right {
+    0%{
+        rotate: 10deg;
+    }
+    100%{
+        rotate: 20deg;
+        border-bottom-color: darkred;
+    }
+}
+@

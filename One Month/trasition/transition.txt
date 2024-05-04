@@ -1,0 +1,66 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+
+    background-color: peachpuff;
+    width: 150px;
+    height: 150px;
+    /* transition-duration: 2s; */
+    /* transition-property: background,transform; */
+    /* transition-timing-function: ease-in-out; */
+    /* transition-timing-function: linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%); */
+    /* transition-delay: 2000ms; */
+    transition: 1s background ease-in-out,500ms transform ease-in-out 1s;
+}
+.box:hover{
+    background: coral;
+    transform:rotateX(80deg) rotateZ(45deg);
+}
+
+
+/* .container{
+    width:100vw;
+    height: 100vh;
+    padding: 24px;
+
+}
+.boxx{
+    width: 50px;
+    height: 50px;
+    padding: 50px;
+
+    background-color: peachpuff;
+    transition-duration: 5s;
+    transition-property: width;
+}
+.b1{
+    background-color: lightgreen;
+    transition-timing-function: linear;
+}
+.b2 {
+    background: paleturquoise;
+    transition-timing-function: ease;
+
+}
+.b3 {
+    background: palevioletred;
+    transition-timing-function: ease-in;
+}
+.b4 {
+    background: peru;
+    transition-timing-function: ease-out;
+}
+
+.b5 {
+    background: rgb(203, 10, 26);
+    transition-timing-function: ease-in-out;
+}
+.container:hover .boxx {
+    width: 400px;
+} */

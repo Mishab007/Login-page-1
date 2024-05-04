@@ -1,0 +1,46 @@
+body {
+    width: 100vh;
+    height: 100vh;
+    position: relative;
+    left: 30%;
+}
+
+.mustache {
+    height: 180px;
+    width: 180px;
+    color: black;
+    /* background-color: currentColor; */
+    box-shadow: 150px 240px 0 0 currentColor , 300px 240px 0 0 currentColor;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.mustache::before {
+    width: 210px;
+    height: 120px;
+    content: "";
+    position: absolute;
+    /* background-color: lightcoral; */
+    border-bottom: 180px solid currentColor;
+    border-radius: 0 0 0 100%;
+    left: 30px;
+    top: 120px;
+    /* z-index: -1; */
+    transform: rotate(-40deg);
+    transform-origin: right 210px;
+}
+
+.mustache::after {
+    width: 210px;
+    height: 120px;
+    content: "";
+    position: absolute;
+    /* background-color: lightcoral; */
+    border-bottom: 180px solid currentColor;
+    border-radius: 0 0 100% 0;
+    left: 390px;
+    top: 120px;
+    /* z-index: -1; */
+    transform: rotate(40deg);
+    transform-origin: left 210px;
+}
